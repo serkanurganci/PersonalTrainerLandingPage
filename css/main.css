@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: #e056fd;
+}
+
+.fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* Navbar */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar {
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.75rem;
+  height: 70px;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#navbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+#navbar ul li a {
+  padding: 2rem;
+  position: relative;
+  font-weight: 800;
+  transition: all ease-in-out 0.3s;
+}
+
+#navbar ul li a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 0.4rem;
+  width: 0%;
+  background-color: var(--purple);
+  bottom: 1.3rem;
+  left: 1rem;
+  transition: all ease-in-out 0.3s;
+}
+
+#navbar ul li a:hover::after {
+  width: 80%;
+}
+
+#navbar ul li a:hover {
+  color: var(--purple);
+}
+/* Home Section */
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 1px solid gray;
+}
+
+#home img {
+  width: 30%;
+  height: auto;
+  border-radius: 100%;
+}
+
+#home .name h2 {
+  margin-bottom: 1rem;
+}
+
+#home .name p {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* Training Section*/
+
+#training {
+  color: whitesmoke;
+  padding: 1rem;
+}
+
+#training .items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#training .items .item {
+  width: 33%;
+  text-align: center;
+  padding: 0.75rem;
+  overflow: hidden;
+  height: 150px;
+  transition: height 2s;
+  background-color: #25282b;
+}
+
+#training .items .item:hover {
+  height: 300px;
+}
+
+#training .items .item:hover {
+  opacity: 0.7;
+}
+
+#training .items .item img {
+  width: 4rem;
+  height: 4rem;
+  background-color: whitesmoke;
+  padding: 0.5rem;
+  border-radius: 100%;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Guide */
+
+#guide {
+  padding: 1rem;
+  color: #25282b;
+}
+
+.courses {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.courses .course {
+  display: flex;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.courses .course .course-image {
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.courses .course .course-image img {
+  border-radius: 5px;
+}
+
+.courses .course .course-image span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: yellowgreen;
+  padding: 0.3rem;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.courses .course .course-info .title {
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.courses .course .course-info .description {
+  letter-spacing: 1.2px;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.courses .course .course-info .instructor {
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+  opacity: 0.6;
+}
+
+/* Forms */
+
+#contact {
+  color: whitesmoke;
+  padding: 1rem;
+}
+
+#contact .contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form ul {
+  list-style-type: none;
+  display: flex;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.contact-form ul li a {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.contact-form ul li a:hover {
+  opacity: 0.8;
+}
+
+.name-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.name-group > input:nth-child(2) {
+  margin-left: 0.5rem;
+}
+
+#message {
+  content: "";
+}
